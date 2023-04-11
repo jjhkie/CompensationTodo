@@ -9,21 +9,40 @@
 /* Begin PBXBuildFile section */
 		B94D743B29E3CB570059FD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D743A29E3CB570059FD68 /* AppDelegate.swift */; };
 		B94D743D29E3CB570059FD68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D743C29E3CB570059FD68 /* SceneDelegate.swift */; };
-		B94D743F29E3CB570059FD68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D743E29E3CB570059FD68 /* ViewController.swift */; };
-		B94D744229E3CB570059FD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D744029E3CB570059FD68 /* Main.storyboard */; };
 		B94D744429E3CB570059FD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94D744329E3CB570059FD68 /* Assets.xcassets */; };
 		B94D744729E3CB570059FD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D744529E3CB570059FD68 /* LaunchScreen.storyboard */; };
+		B94D744F29E3D0E30059FD68 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D744E29E3D0E30059FD68 /* BasketView.swift */; };
+		B94D745329E3D4080059FD68 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B94D745229E3D4080059FD68 /* SnapKit */; };
+		B94D745629E3D4110059FD68 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B94D745529E3D4110059FD68 /* Then */; };
+		B94D745829E3F5040059FD68 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D745729E3F5040059FD68 /* MainView.swift */; };
+		B94D745A29E3F50C0059FD68 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D745929E3F50C0059FD68 /* MyPageView.swift */; };
+		B94D745C29E3F85E0059FD68 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D745B29E3F85E0059FD68 /* MainViewModel.swift */; };
+		B94D746029E3F98A0059FD68 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B94D745F29E3F98A0059FD68 /* RxCocoa */; };
+		B94D746229E3F98A0059FD68 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B94D746129E3F98A0059FD68 /* RxRelay */; };
+		B94D746429E3F98A0059FD68 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B94D746329E3F98A0059FD68 /* RxSwift */; };
+		B94D746629E3FD6E0059FD68 /* MainListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746529E3FD6E0059FD68 /* MainListModel.swift */; };
+		B94D746929E404220059FD68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746829E404220059FD68 /* Constants.swift */; };
+		B94D746C29E418B80059FD68 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746B29E418B80059FD68 /* MainCell.swift */; };
+		B94D746E29E424490059FD68 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746D29E424490059FD68 /* MyPageViewModel.swift */; };
+		B94D747029E424580059FD68 /* MyPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746F29E424580059FD68 /* MyPageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B94D743729E3CB570059FD68 /* CompensationTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompensationTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94D743A29E3CB570059FD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94D743C29E3CB570059FD68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B94D743E29E3CB570059FD68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B94D744129E3CB570059FD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B94D744329E3CB570059FD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B94D744629E3CB570059FD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94D744829E3CB570059FD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B94D744E29E3D0E30059FD68 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		B94D745729E3F5040059FD68 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B94D745929E3F50C0059FD68 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		B94D745B29E3F85E0059FD68 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B94D746529E3FD6E0059FD68 /* MainListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListModel.swift; sourceTree = "<group>"; };
+		B94D746829E404220059FD68 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B94D746B29E418B80059FD68 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		B94D746D29E424490059FD68 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
+		B94D746F29E424580059FD68 /* MyPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94D746029E3F98A0059FD68 /* RxCocoa in Frameworks */,
+				B94D745329E3D4080059FD68 /* SnapKit in Frameworks */,
+				B94D746429E3F98A0059FD68 /* RxSwift in Frameworks */,
+				B94D746229E3F98A0059FD68 /* RxRelay in Frameworks */,
+				B94D745629E3D4110059FD68 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +82,52 @@
 			children = (
 				B94D743A29E3CB570059FD68 /* AppDelegate.swift */,
 				B94D743C29E3CB570059FD68 /* SceneDelegate.swift */,
-				B94D743E29E3CB570059FD68 /* ViewController.swift */,
-				B94D744029E3CB570059FD68 /* Main.storyboard */,
+				B94D746A29E405CB0059FD68 /* Utils */,
+				B94D746729E3FD780059FD68 /* Model */,
+				B94D745029E3D0F20059FD68 /* View */,
+				B94D745D29E3F8640059FD68 /* ViewModel */,
 				B94D744329E3CB570059FD68 /* Assets.xcassets */,
 				B94D744529E3CB570059FD68 /* LaunchScreen.storyboard */,
 				B94D744829E3CB570059FD68 /* Info.plist */,
 			);
 			path = CompensationTodo;
+			sourceTree = "<group>";
+		};
+		B94D745029E3D0F20059FD68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B94D745729E3F5040059FD68 /* MainView.swift */,
+				B94D744E29E3D0E30059FD68 /* BasketView.swift */,
+				B94D745929E3F50C0059FD68 /* MyPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B94D745D29E3F8640059FD68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B94D745B29E3F85E0059FD68 /* MainViewModel.swift */,
+				B94D746D29E424490059FD68 /* MyPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B94D746729E3FD780059FD68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B94D746529E3FD6E0059FD68 /* MainListModel.swift */,
+				B94D746F29E424580059FD68 /* MyPageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B94D746A29E405CB0059FD68 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B94D746829E404220059FD68 /* Constants.swift */,
+				B94D746B29E418B80059FD68 /* MainCell.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +146,13 @@
 			dependencies = (
 			);
 			name = CompensationTodo;
+			packageProductDependencies = (
+				B94D745229E3D4080059FD68 /* SnapKit */,
+				B94D745529E3D4110059FD68 /* Then */,
+				B94D745F29E3F98A0059FD68 /* RxCocoa */,
+				B94D746129E3F98A0059FD68 /* RxRelay */,
+				B94D746329E3F98A0059FD68 /* RxSwift */,
+			);
 			productName = CompensationTodo;
 			productReference = B94D743729E3CB570059FD68 /* CompensationTodo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +181,11 @@
 				Base,
 			);
 			mainGroup = B94D742E29E3CB570059FD68;
+			packageReferences = (
+				B94D745129E3D4080059FD68 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				B94D745429E3D4110059FD68 /* XCRemoteSwiftPackageReference "Then" */,
+				B94D745E29E3F98A0059FD68 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B94D743829E3CB570059FD68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +202,6 @@
 			files = (
 				B94D744729E3CB570059FD68 /* LaunchScreen.storyboard in Resources */,
 				B94D744429E3CB570059FD68 /* Assets.xcassets in Resources */,
-				B94D744229E3CB570059FD68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94D743F29E3CB570059FD68 /* ViewController.swift in Sources */,
+				B94D747029E424580059FD68 /* MyPageModel.swift in Sources */,
+				B94D746629E3FD6E0059FD68 /* MainListModel.swift in Sources */,
+				B94D744F29E3D0E30059FD68 /* BasketView.swift in Sources */,
+				B94D745829E3F5040059FD68 /* MainView.swift in Sources */,
+				B94D745A29E3F50C0059FD68 /* MyPageView.swift in Sources */,
 				B94D743B29E3CB570059FD68 /* AppDelegate.swift in Sources */,
 				B94D743D29E3CB570059FD68 /* SceneDelegate.swift in Sources */,
+				B94D745C29E3F85E0059FD68 /* MainViewModel.swift in Sources */,
+				B94D746E29E424490059FD68 /* MyPageViewModel.swift in Sources */,
+				B94D746929E404220059FD68 /* Constants.swift in Sources */,
+				B94D746C29E418B80059FD68 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B94D744029E3CB570059FD68 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B94D744129E3CB570059FD68 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B94D744529E3CB570059FD68 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +366,6 @@
 				INFOPLIST_FILE = CompensationTodo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +393,6 @@
 				INFOPLIST_FILE = CompensationTodo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +430,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B94D745129E3D4080059FD68 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B94D745429E3D4110059FD68 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		B94D745E29E3F98A0059FD68 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B94D745229E3D4080059FD68 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94D745129E3D4080059FD68 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		B94D745529E3D4110059FD68 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94D745429E3D4110059FD68 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		B94D745F29E3F98A0059FD68 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94D745E29E3F98A0059FD68 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B94D746129E3F98A0059FD68 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94D745E29E3F98A0059FD68 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		B94D746329E3F98A0059FD68 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94D745E29E3F98A0059FD68 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B94D742F29E3CB570059FD68 /* Project object */;
 }
