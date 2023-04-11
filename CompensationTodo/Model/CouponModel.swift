@@ -8,6 +8,7 @@
 import Foundation
 
 
-struct MyPageModel{
+struct CouponModel{
     var title: String
+    var expanded: Bool
 }

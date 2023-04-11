@@ -5,10 +5,13 @@
 //  Created by 김진혁 on 2023/04/10.
 //
 
-import Foundation
+
+import UIKit
 
 
 struct MainListModel{
-    var name: String
-    var time: Date
+    var name: String?
+    var image: UIImage?
+    var time: Date?
+    var favorite: Bool?
 }

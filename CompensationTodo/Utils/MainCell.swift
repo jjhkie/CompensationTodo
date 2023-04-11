@@ -16,11 +16,13 @@ class MainCell: UICollectionViewCell{
     var timeLabel = UILabel()
     
     
- 
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         attribute()
         layout()
+        
+        
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +34,18 @@ class MainCell: UICollectionViewCell{
 }
 extension MainCell{
     private func attribute(){
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = contentView.frame.width / 4.0
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+        layer.masksToBounds = false
+        layer.shadowRadius = 4
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowColor = UIColor.black.cgColor
         starButton.image = UIImage(systemName: "star")
+        
+        titleLabel.textAlignment = .center
+        timeLabel.textAlignment = .center
     }
     
     private func layout(){
@@ -53,7 +66,7 @@ extension MainCell{
         }
         timeLabel.snp.makeConstraints{
             $0.top.equalTo(titleLabel.snp.bottom)
-            $0.leading.trailing.bottom.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview().inset(15)
         }
     }
 }

@@ -7,19 +7,20 @@
 
 import RxSwift
 import RxCocoa
-import Foundation
+import UIKit
 
 
 class MainViewModel{
     
-    let testData = [MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date()),
-                    MainListModel(name: "abc",time: Date())]
+    let testData : [MainListModel]? = [MainListModel(name:"abc",image: UIImage(systemName: "eraser"), time: Date(),favorite: true)]
+//    = [MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date()),
+//                    MainListModel(name: "abc",time: Date())]
 
     
     let bag = DisposeBag()
@@ -33,7 +34,7 @@ class MainViewModel{
     }
     
     //let mainData = BehaviorRelay(value: [TodayModel]())
-    let mainData = BehaviorRelay<[MainListModel]>(value: [])
+    let mainData = BehaviorRelay<[MainListModel]>(value: [MainListModel()])
     
     func inOut(input: Input) -> Output{
         
@@ -41,7 +42,6 @@ class MainViewModel{
         
         return Output(mainColVData: mainData.asDriver(onErrorJustReturn: []))
     }
-
 }
 
 
@@ -49,7 +49,12 @@ class MainViewModel{
 extension MainViewModel{
     
     func loadData(){
-        mainData.accept(testData)
+        if let item = testData{
+            mainData.accept(item)
+        }else{
+            
+        }
+        
     }
     
 }
