@@ -7,21 +7,25 @@
 
 import RxSwift
 import RxCocoa
-import Foundation
+import UIKit
 
 class CouponPageViewModel{
     
     let bag = DisposeBag()
     
-    var testData = [CouponModel(title: "Coupon",expanded: false),
-                    CouponModel(title: "Coupon",expanded: false),
-                    CouponModel(title: "Coupon",expanded: false),
-                    CouponModel(title: "Coupon",expanded: false),
-                    CouponModel(title: "Coupon",expanded: false)
-                    ]
+    var testData = [
+        CouponModel(header: "예시1", items: [ConditionType(title: "쿠폰1", image: UIImage(systemName: "pill")!, paymentDate: Date(), expanded: false, condition: [ConditionItem(name: "조건 1", check: false)])]),
+        CouponModel(header: "예시1", items: [ConditionType(title: "쿠폰1", image: UIImage(systemName: "pill")!, paymentDate: Date(), expanded: false, condition: [ConditionItem(name: "조건 1", check: false)])]),
+        CouponModel(header: "예시1", items: [ConditionType(title: "쿠폰1", image: UIImage(systemName: "pill")!, paymentDate: Date(), expanded: false, condition: [ConditionItem(name: "조건 1", check: false)])])
+    ]
+    
+    
+    
+    
+    
     
     struct Input{
-        let cellSelected : Observable<IndexPath>
+        let cellItemClick: Observable<IndexPath>
     }
     
     struct Output{
@@ -30,29 +34,30 @@ class CouponPageViewModel{
     
     //MARK:  Data
     let mainData = BehaviorRelay<[CouponModel]>(value: [])
+    let selectedCellIndex = PublishSubject<IndexPath>()
     
-
+    
 }
 
 //MARK: - Functions
 extension CouponPageViewModel{
     
     func inOut(input: Input) -> Output{
-        
         mainData.accept(testData)
         
-        input.cellSelected
-            .subscribe(onNext: {_ in 
-                print("abc")
+        input.cellItemClick
+            .subscribe(onNext: {indexPath in
+                
+                var newData = self.mainData.value
+                newData[indexPath.row].items[0].expanded = !newData[indexPath.row].items[0].expanded
+                self.mainData.accept(newData)
             })
             .disposed(by: bag)
-            
         
         return Output(cellData:mainData.asDriver(onErrorJustReturn: []))
     }
     
-    func toggleCellHeight(at indexPath: IndexPath) {
-        testData[indexPath.row].expanded.toggle()
+    func dataChange(){
         
     }
 }
