@@ -10,10 +10,13 @@ import SnapKit
 import Then
 import RxSwift
 import RxDataSources
+import Floaty
 
 class CouponPageView: UIViewController{
     
     let bag = DisposeBag()
+    
+    let floaty = Floaty()
     
     let tableView = UITableView().then{
         $0.backgroundColor = UIColor(hex: Common.backgroundColor)
@@ -26,7 +29,7 @@ class CouponPageView: UIViewController{
         //$0.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "Header")
     }
     
-    var dataSource: RxTableViewSectionedReloadDataSource<CouponModel> {
+    private var dataSource: RxTableViewSectionedReloadDataSource<CouponModel> {
         return RxTableViewSectionedReloadDataSource<CouponModel>(
             configureCell: { dataSource, tableView, indexPath, item in
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CouponCell else {return UITableViewCell()}
@@ -45,7 +48,13 @@ class CouponPageView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(hex: Common.backgroundColor)
-        
+        floaty.handleFirstItemDirectly = true
+        floaty.addItem("I got a handler", icon: UIImage(systemName: "pill")!, handler: { item in
+            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Me too", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            self.floaty.close()
+        })
         bind(CouponPageViewModel())
         layout()
     }
@@ -56,6 +65,8 @@ class CouponPageView: UIViewController{
 extension CouponPageView{
     
     func bind(_ VM: CouponPageViewModel){
+        
+
         
         let input = CouponPageViewModel.Input(cellItemClick: tableView.rx.itemSelected.asObservable())
         
@@ -108,7 +119,8 @@ extension CouponPageView{
     
     private func layout(){
         view.addSubview(tableView)
-        
+        view.addSubview(floaty)
+
         tableView.snp.makeConstraints{
             $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)

@@ -15,5 +15,8 @@ struct Common{
 
 struct ReCell{
     static let commonCell = UICollectionViewCell()
+    static let addCouponName = AddCouponNameCell()
+    static let addCouponImage = AddCouponImageCell()
+    static let addCouponDiscount = AddCouponDiscountCell()
     
 }

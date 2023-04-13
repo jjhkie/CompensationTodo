@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         let MainViewController = MainView()
         let basketViewController = BasketView()
-        let couponViewController = CouponPageView()
+        let couponViewController = CouponAddView()
         
         let view = UINavigationController(rootViewController: tabBarController)
 

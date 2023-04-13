@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005BA190B2B742B336E14D8C /* Pods_CompensationTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985C3404B978DBE70C29811F /* Pods_CompensationTodo.framework */; };
 		B93587D129E7A4FB006FF502 /* CouponAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587D029E7A4FB006FF502 /* CouponAddView.swift */; };
 		B93587D329E7A745006FF502 /* CouponAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587D229E7A745006FF502 /* CouponAddViewModel.swift */; };
 		B93587D529E7A7FF006FF502 /* CouponAddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587D429E7A7FF006FF502 /* CouponAddModel.swift */; };
 		B93587D829E7B5E1006FF502 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B93587D729E7B5E1006FF502 /* RxCocoa */; };
 		B93587DA29E7B5E1006FF502 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B93587D929E7B5E1006FF502 /* RxRelay */; };
 		B93587DC29E7B5E1006FF502 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B93587DB29E7B5E1006FF502 /* RxSwift */; };
+		B93587DE29E7D02D006FF502 /* AddCouponNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587DD29E7D02D006FF502 /* AddCouponNameCell.swift */; };
+		B93587E129E7D8F5006FF502 /* AddCouponImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587E029E7D8F5006FF502 /* AddCouponImageCell.swift */; };
+		B93587E329E7DF34006FF502 /* AddCouponDiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587E229E7DF34006FF502 /* AddCouponDiscountCell.swift */; };
+		B93587E529E7E1F5006FF502 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587E429E7E1F5006FF502 /* CircleProgressBar.swift */; };
+		B93587E729E7EB7A006FF502 /* AddCouponLineColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93587E629E7EB7A006FF502 /* AddCouponLineColorCell.swift */; };
 		B9415A4729E52B3500A062A6 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9415A4629E52B3500A062A6 /* UIColor+.swift */; };
 		B9415A4929E5423000A062A6 /* ProductAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9415A4829E5423000A062A6 /* ProductAddView.swift */; };
 		B9415A4B29E543C700A062A6 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9415A4A29E543C700A062A6 /* ProductDetailView.swift */; };
@@ -36,9 +42,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		733D20FEACC8859C1E8B792D /* Pods-CompensationTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompensationTodo.debug.xcconfig"; path = "Target Support Files/Pods-CompensationTodo/Pods-CompensationTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA6D580122873657FF3531A /* Pods-CompensationTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompensationTodo.release.xcconfig"; path = "Target Support Files/Pods-CompensationTodo/Pods-CompensationTodo.release.xcconfig"; sourceTree = "<group>"; };
+		985C3404B978DBE70C29811F /* Pods_CompensationTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompensationTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93587D029E7A4FB006FF502 /* CouponAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAddView.swift; sourceTree = "<group>"; };
 		B93587D229E7A745006FF502 /* CouponAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAddViewModel.swift; sourceTree = "<group>"; };
 		B93587D429E7A7FF006FF502 /* CouponAddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponAddModel.swift; sourceTree = "<group>"; };
+		B93587DD29E7D02D006FF502 /* AddCouponNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponNameCell.swift; sourceTree = "<group>"; };
+		B93587E029E7D8F5006FF502 /* AddCouponImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponImageCell.swift; sourceTree = "<group>"; };
+		B93587E229E7DF34006FF502 /* AddCouponDiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponDiscountCell.swift; sourceTree = "<group>"; };
+		B93587E429E7E1F5006FF502 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
+		B93587E629E7EB7A006FF502 /* AddCouponLineColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCouponLineColorCell.swift; sourceTree = "<group>"; };
 		B9415A4629E52B3500A062A6 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		B9415A4829E5423000A062A6 /* ProductAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAddView.swift; sourceTree = "<group>"; };
 		B9415A4A29E543C700A062A6 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
@@ -71,17 +85,50 @@
 				B93587D829E7B5E1006FF502 /* RxCocoa in Frameworks */,
 				B94D745629E3D4110059FD68 /* Then in Frameworks */,
 				B93587DC29E7B5E1006FF502 /* RxSwift in Frameworks */,
+				005BA190B2B742B336E14D8C /* Pods_CompensationTodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3868FCE8897E98505CDDF56E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985C3404B978DBE70C29811F /* Pods_CompensationTodo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43F832C1476C8AC1817800A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				733D20FEACC8859C1E8B792D /* Pods-CompensationTodo.debug.xcconfig */,
+				8FA6D580122873657FF3531A /* Pods-CompensationTodo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B93587DF29E7D256006FF502 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B94D746B29E418B80059FD68 /* MainCell.swift */,
+				B9415A4C29E5612200A062A6 /* CouponCell.swift */,
+				B93587DD29E7D02D006FF502 /* AddCouponNameCell.swift */,
+				B93587E029E7D8F5006FF502 /* AddCouponImageCell.swift */,
+				B93587E229E7DF34006FF502 /* AddCouponDiscountCell.swift */,
+				B93587E629E7EB7A006FF502 /* AddCouponLineColorCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B94D742E29E3CB570059FD68 = {
 			isa = PBXGroup;
 			children = (
 				B94D743929E3CB570059FD68 /* CompensationTodo */,
 				B94D743829E3CB570059FD68 /* Products */,
+				43F832C1476C8AC1817800A8 /* Pods */,
+				3868FCE8897E98505CDDF56E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,10 +192,10 @@
 		B94D746A29E405CB0059FD68 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B93587DF29E7D256006FF502 /* Cell */,
 				B94D746829E404220059FD68 /* Constants.swift */,
-				B94D746B29E418B80059FD68 /* MainCell.swift */,
+				B93587E429E7E1F5006FF502 /* CircleProgressBar.swift */,
 				B9415A4629E52B3500A062A6 /* UIColor+.swift */,
-				B9415A4C29E5612200A062A6 /* CouponCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -160,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B94D744B29E3CB570059FD68 /* Build configuration list for PBXNativeTarget "CompensationTodo" */;
 			buildPhases = (
+				A4FC0F1D42DEA2E83AB086DA /* [CP] Check Pods Manifest.lock */,
 				B94D743329E3CB570059FD68 /* Sources */,
 				B94D743429E3CB570059FD68 /* Frameworks */,
 				B94D743529E3CB570059FD68 /* Resources */,
+				2EC6C1F3DFA9DE1149094FB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +281,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EC6C1F3DFA9DE1149094FB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompensationTodo/Pods-CompensationTodo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompensationTodo/Pods-CompensationTodo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CompensationTodo/Pods-CompensationTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4FC0F1D42DEA2E83AB086DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CompensationTodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B94D743329E3CB570059FD68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -240,12 +331,17 @@
 				B94D747029E424580059FD68 /* CouponModel.swift in Sources */,
 				B9415A4B29E543C700A062A6 /* ProductDetailView.swift in Sources */,
 				B94D746629E3FD6E0059FD68 /* MainListModel.swift in Sources */,
+				B93587E129E7D8F5006FF502 /* AddCouponImageCell.swift in Sources */,
+				B93587E329E7DF34006FF502 /* AddCouponDiscountCell.swift in Sources */,
 				B9415A4D29E5612200A062A6 /* CouponCell.swift in Sources */,
+				B93587E729E7EB7A006FF502 /* AddCouponLineColorCell.swift in Sources */,
 				B94D744F29E3D0E30059FD68 /* BasketView.swift in Sources */,
 				B94D745829E3F5040059FD68 /* MainView.swift in Sources */,
 				B93587D329E7A745006FF502 /* CouponAddViewModel.swift in Sources */,
 				B93587D129E7A4FB006FF502 /* CouponAddView.swift in Sources */,
+				B93587DE29E7D02D006FF502 /* AddCouponNameCell.swift in Sources */,
 				B94D745A29E3F50C0059FD68 /* CouponPageView.swift in Sources */,
+				B93587E529E7E1F5006FF502 /* CircleProgressBar.swift in Sources */,
 				B9415A4729E52B3500A062A6 /* UIColor+.swift in Sources */,
 				B94D743B29E3CB570059FD68 /* AppDelegate.swift in Sources */,
 				B94D743D29E3CB570059FD68 /* SceneDelegate.swift in Sources */,
@@ -388,6 +484,7 @@
 		};
 		B94D744C29E3CB570059FD68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733D20FEACC8859C1E8B792D /* Pods-CompensationTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -415,6 +512,7 @@
 		};
 		B94D744D29E3CB570059FD68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA6D580122873657FF3531A /* Pods-CompensationTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

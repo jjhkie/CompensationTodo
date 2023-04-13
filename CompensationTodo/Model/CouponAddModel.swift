@@ -15,9 +15,9 @@ struct CouponAddModel{
 }
 
 struct AddItemInfo{
-    var couponImage : UIImage
-    var couponName : String
-    var couponDicount :Double
+    var couponImage : UIImage?
+    var couponName : String?
+    var couponDicount :Double?
     var couponTerms: [CouponTermsItem]?
 }
 
