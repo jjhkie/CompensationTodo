@@ -38,6 +38,7 @@
 		B94D746C29E418B80059FD68 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746B29E418B80059FD68 /* MainCell.swift */; };
 		B94D746E29E424490059FD68 /* CouponPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746D29E424490059FD68 /* CouponPageViewModel.swift */; };
 		B94D747029E424580059FD68 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D746F29E424580059FD68 /* CouponModel.swift */; };
+		B955C0A929E91D1F001CE3D1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B955C0A829E91D1F001CE3D1 /* RealmSwift */; };
 		B9A845C729E6962800625C30 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = B9A845C629E6962800625C30 /* RxDataSources */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B955C0A929E91D1F001CE3D1 /* RealmSwift in Frameworks */,
 				B93587DA29E7B5E1006FF502 /* RxRelay in Frameworks */,
 				B94D745329E3D4080059FD68 /* SnapKit in Frameworks */,
 				B9A845C729E6962800625C30 /* RxDataSources in Frameworks */,
@@ -122,6 +124,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B93587E829E7F067006FF502 /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				B9415A4829E5423000A062A6 /* ProductAddView.swift */,
+				B93587D029E7A4FB006FF502 /* CouponAddView.swift */,
+			);
+			path = AddView;
+			sourceTree = "<group>";
+		};
 		B94D742E29E3CB570059FD68 = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +173,8 @@
 				B94D745729E3F5040059FD68 /* MainView.swift */,
 				B94D744E29E3D0E30059FD68 /* BasketView.swift */,
 				B94D745929E3F50C0059FD68 /* CouponPageView.swift */,
-				B9415A4829E5423000A062A6 /* ProductAddView.swift */,
 				B9415A4A29E543C700A062A6 /* ProductDetailView.swift */,
-				B93587D029E7A4FB006FF502 /* CouponAddView.swift */,
+				B93587E829E7F067006FF502 /* AddView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				B94D745B29E3F85E0059FD68 /* MainViewModel.swift */,
-				B94D746D29E424490059FD68 /* CouponPageViewModel.swift */,
 				B93587D229E7A745006FF502 /* CouponAddViewModel.swift */,
+				B94D746D29E424490059FD68 /* CouponPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -225,6 +235,7 @@
 				B93587D729E7B5E1006FF502 /* RxCocoa */,
 				B93587D929E7B5E1006FF502 /* RxRelay */,
 				B93587DB29E7B5E1006FF502 /* RxSwift */,
+				B955C0A829E91D1F001CE3D1 /* RealmSwift */,
 			);
 			productName = CompensationTodo;
 			productReference = B94D743729E3CB570059FD68 /* CompensationTodo.app */;
@@ -259,6 +270,7 @@
 				B94D745429E3D4110059FD68 /* XCRemoteSwiftPackageReference "Then" */,
 				B9A845C529E6962800625C30 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				B93587D629E7B5E1006FF502 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B955C0A729E91D1F001CE3D1 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = B94D743829E3CB570059FD68 /* Products */;
 			projectDirPath = "";
@@ -586,6 +598,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		B955C0A729E91D1F001CE3D1 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B9A845C529E6962800625C30 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
@@ -621,6 +641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B94D745429E3D4110059FD68 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		B955C0A829E91D1F001CE3D1 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B955C0A729E91D1F001CE3D1 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		B9A845C629E6962800625C30 /* RxDataSources */ = {
 			isa = XCSwiftPackageProductDependency;

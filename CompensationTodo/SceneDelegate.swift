@@ -22,17 +22,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBarController = UITabBarController()
         let MainViewController = MainView()
-        let basketViewController = BasketView()
-        let couponViewController = CouponAddView()
+        //let basketViewController = BasketView()
+        let couponViewController = CouponPageView()
         
         let view = UINavigationController(rootViewController: tabBarController)
 
         
-        tabBarController.viewControllers = [MainViewController,basketViewController,couponViewController]
+        tabBarController.viewControllers = [MainViewController,couponViewController]
         
         MainViewController.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "house"), tag: 0)
-        basketViewController.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "house"), tag: 1)
-        couponViewController.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "house"), tag: 2)
+        //basketViewController.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "house"), tag: 1)
+        couponViewController.tabBarItem = UITabBarItem(title: "Coupon", image: UIImage(systemName: "house"), tag: 1)
 
         
         window?.rootViewController = view

@@ -7,13 +7,26 @@
 
 import UIKit
 import RxCocoa
+import RxSwift
 
+protocol MyCellOutput {
+    func updateText(_ text: String)
+}
 
-class CouponAddViewModel{
+class CouponAddViewModel:MyCellOutput{
+    
+    var nameText = ""
+    
+    func updateText(_ text: String) {
+       
+        self.nameText = text
+        print(nameText)
+    }
+    
     
     var testData :[CouponAddModel] = [
-        CouponAddModel(header: "Name", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
-        CouponAddModel(header: "Image", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
+        CouponAddModel(header: "", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
+        CouponAddModel(header: "", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
         CouponAddModel(header: "Discount", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
         CouponAddModel(header: "Line Color", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
         CouponAddModel(header: "Condition", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)])
@@ -21,7 +34,7 @@ class CouponAddViewModel{
     ]
     
     struct Input{
-        
+        let addButtonTapped : Observable<Void>
     }
     
     struct Output{

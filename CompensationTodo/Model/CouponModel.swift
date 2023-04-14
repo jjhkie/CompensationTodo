@@ -33,6 +33,14 @@ struct ConditionType{
     }
 }
 
+//var couponTitle : String // 쿠폰 이름
+//var couponColor : UIColor // 쿠폰 색
+//var couponDate : Date // 지급 날짜
+//var couponCondition : [Conditions]
+
+
+//var condtionName : String
+//var conditionCheck : Bool
 
 
 

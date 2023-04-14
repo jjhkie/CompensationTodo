@@ -10,19 +10,19 @@ import SnapKit
 import Then
 import RxSwift
 import RxDataSources
-import Floaty
+
 
 class CouponPageView: UIViewController{
     
     let bag = DisposeBag()
     
-    let floaty = Floaty()
+    private let floatingButton = UIButton()
     
     let tableView = UITableView().then{
         $0.backgroundColor = UIColor(hex: Common.backgroundColor)
         $0.register(CouponCell.self, forCellReuseIdentifier: "Cell")
 
-        $0.estimatedRowHeight = 100
+        $0.estimatedRowHeight = 150
         $0.rowHeight = UITableView.automaticDimension
         
         $0.separatorStyle = .none
@@ -33,9 +33,9 @@ class CouponPageView: UIViewController{
         return RxTableViewSectionedReloadDataSource<CouponModel>(
             configureCell: { dataSource, tableView, indexPath, item in
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CouponCell else {return UITableViewCell()}
-                cell.bottomDescriptionLabel.text = item.title
+                //cell.bottomDescriptionLabel.text = item.title
                 
-                cell.bottomView.isHidden = !item.expanded
+                //cell.bottomDescriptionLabel.isHidden = !item.expanded
                 //cell.textLabel?.text = item
                 return cell
             },
@@ -48,14 +48,8 @@ class CouponPageView: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(hex: Common.backgroundColor)
-        floaty.handleFirstItemDirectly = true
-        floaty.addItem("I got a handler", icon: UIImage(systemName: "pill")!, handler: { item in
-            let alert = UIAlertController(title: "Hey", message: "I'm hungry...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Me too", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            self.floaty.close()
-        })
         bind(CouponPageViewModel())
+        attribute()
         layout()
     }
 }
@@ -76,54 +70,33 @@ extension CouponPageView{
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
         
-//        tableView.rx.itemSelected
-//            .bind(onNext: {indexPath in
-//                guard let cell = self.tableView.cellForRow(at: indexPath) as? CouponCell else {return}
-//                cell.bottomView.isHidden = !cell.bottomView.isHidden
-//                print(indexPath)
-//                self.tableView.reloadRows(at: [indexPath], with: .automatic)
-//            })
-//            .disposed(by: bag)
-//
-//        tableView.rx.itemSelected
-//            .bind(onNext: {indexPath in
-//                //현재 선택된 셀의 정보
-//                guard let cell = self.tableView.cellForRow(at: indexPath) as? CouponCell else {return}
-//                cell.expanded = !cell.expanded
-//                if cell.expanded{
-//                    UIView.animate(withDuration: 0.1, delay: 0,options: .curveEaseOut, animations: {
-//                        
-//                        cell.backgroundColor = .blue
-//                        cell.wrapView.snp.updateConstraints{
-//
-//                            $0.height.equalTo(500)
-//                        }
-//                        cell.layoutIfNeeded()
-//                    })
-//                }else{
-//                    UIView.animate(withDuration: 0.1, delay: 0,options: .curveEaseOut, animations: {
-//                        cell.backgroundColor = .green
-//                        cell.wrapView.snp.updateConstraints{
-//                            $0.height.equalTo(200)
-//                        }
-//                        cell.layoutIfNeeded()
-//                    })
-//                    
-//                    //self.tableView.reloadRows(at: [indexPath], with: .automatic)
-//                }
-//            })
-//            .disposed(by: bag)
+        floatingButton.rx.tap
+            .subscribe(onNext: {
+                self.navigationController?.pushViewController(CouponAddView(), animated: true)
+            })
+            .disposed(by: bag)
+    }
+    
+    private func attribute(){
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .blue
+        config.image = UIImage(systemName: "plus")
+        floatingButton.configuration = config
     }
     
     
     
     private func layout(){
         view.addSubview(tableView)
-        view.addSubview(floaty)
+        view.addSubview(floatingButton)
 
         tableView.snp.makeConstraints{
             $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        floatingButton.snp.makeConstraints{
+            $0.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.width.height.equalTo(50)
         }
         
     }

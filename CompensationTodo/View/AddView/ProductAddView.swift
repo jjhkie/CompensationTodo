@@ -9,6 +9,9 @@ import UIKit
 
 
 class ProductAddView:UIViewController{
+    
+    let tableView = UITableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
