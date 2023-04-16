@@ -12,6 +12,7 @@ import Then
 class CouponCell:UITableViewCell{
     
     var containerStackView = UIStackView().then{
+        $0.alignment = .center
         $0.axis = .vertical
     }
     
@@ -46,13 +47,11 @@ class CouponCell:UITableViewCell{
     var line = UIView().then{
         $0.backgroundColor = UIColor(hex: "#B1B2FF", alpha: 1) // remove
         $0.layer.cornerRadius = 2
-        //$0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     //상단의 Image
     var topImageView = UIImageView().then{
         $0.image = UIImage(systemName: "books.vertical.fill")
-        //$0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     //상단의 추첨권 Label
@@ -65,8 +64,8 @@ class CouponCell:UITableViewCell{
     //MARK: Bottom View
     
     //조건을 담아둘 하단 View
-    var bottomView = UIStackView().then{
-        $0.axis = .vertical
+    var bottomContainerView = UIView().then{
+        //$0.axis = .vertical
         $0.layer.shadowColor = UIColor.black.cgColor
         $0.layer.shadowOffset = CGSize(width: 0, height: 2)
         $0.layer.shadowRadius = 4
@@ -75,6 +74,7 @@ class CouponCell:UITableViewCell{
     
     //조건 Label
     var bottomDescriptionLabel = UILabel().then{
+        $0.isHidden = true
         $0.text = "Test : Description Text" //Remove
     }
     
@@ -90,6 +90,8 @@ class CouponCell:UITableViewCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = UIColor(hex: Common.backgroundColor)
         layout()
+        
+        bottomContainerView.backgroundColor = .green
     }
     
     required init?(coder: NSCoder) {
@@ -100,79 +102,73 @@ class CouponCell:UITableViewCell{
 extension CouponCell{
     
     private func layout(){
-        [line,topImageView,topTitleLabel].forEach{
+        [line,circle,topImageView,topTitleLabel].forEach{
             topContainerView.addSubview($0)
         }
-//        [bottomDescriptionLabel,viewMore].forEach{
-//            bottomView.addArrangedSubview($0)
-//        }
-        [topContainerView].forEach{
+        
+        [viewMore,bottomDescriptionLabel].forEach{
+            bottomContainerView.addSubview($0)
+        }
+
+        //ContainerView
+        [topContainerView,bottomContainerView].forEach{
             containerStackView.addArrangedSubview($0)
         }
-        [viewMore,bottomDescriptionLabel,containerStackView,circle].forEach{
+        
+        //Wrap
+        [containerStackView].forEach{
             contentView.addSubview($0)
         }
         
+        containerStackView.snp.makeConstraints{
+            $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+            $0.center.equalToSuperview()
+        }
+        
         topContainerView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+            $0.trailing.leading.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(100)
         }
         
+        bottomContainerView.snp.makeConstraints{
+            $0.width.equalToSuperview().multipliedBy(0.9)
+            $0.height.equalTo(50)
+        }
         
-        //상단 line Constraints
         line.snp.makeConstraints{
-            $0.leading.top.equalToSuperview()
+            $0.top.leading.equalToSuperview()
             $0.height.equalTo(3)
-            $0.width.equalToSuperview().dividedBy(1.3)
+            $0.width.equalToSuperview().multipliedBy(0.8)
         }
-        
-        
-        //상단 image Constraints
-        topImageView.snp.makeConstraints{
-            $0.top.equalTo(line.snp.bottom).offset(5)
-            $0.leading.equalToSuperview().inset(30)
-            $0.height.equalTo(50)
-            $0.width.equalTo(50)
-        }
-        
-        // 상단 Label COnsstraints
-        topTitleLabel.snp.makeConstraints{
-            $0.top.equalTo(topImageView.snp.bottom)
-            $0.leading.equalTo(topImageView.snp.leading)
-            $0.bottom.equalToSuperview().offset(-20)
-        }
-        
-        
-        
-        
-        bottomDescriptionLabel.snp.makeConstraints{
-            $0.top.equalTo(containerStackView.snp.bottom).offset(-5)
-            //$0.leading.equalTo()
-            $0.height.equalTo(50)
-            $0.edges.equalToSuperview()
-        }
-        
-        //        viewMore.snp.makeConstraints{
-        //            $0.leading.bottom.trailing.equalToSuperview().inset(10)
-        //        }
-        
-        
-        
-        
-        
-        
         circle.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(15)
-            $0.leading.equalToSuperview().inset(15)
+            $0.top.equalTo(line.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(-15)
             $0.width.height.equalTo(30)
         }
         
-        
-        containerStackView.snp.makeConstraints{
-            
-            $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 20))
+        topImageView.snp.makeConstraints{
+            $0.top.equalTo(line.snp.bottom).offset(10)
+            $0.leading.equalToSuperview().offset(30)
+            $0.height.equalToSuperview().multipliedBy(0.5)
+            $0.width.equalTo(topContainerView.snp.height).multipliedBy(0.5)
         }
-        //self.contentView.bringSubviewToFront(topContainerView)
-        self.contentView.bringSubviewToFront(circle)
+        
+        topTitleLabel.snp.makeConstraints{
+            $0.top.equalTo(topImageView.snp.bottom).offset(10)
+            $0.leading.equalTo(topImageView.snp.leading)
+        }
+        
+        bottomDescriptionLabel.snp.makeConstraints{
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+        }
+        
+        viewMore.snp.makeConstraints{
+            $0.top.equalTo(bottomDescriptionLabel.snp.bottom)
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
     }
     
 }

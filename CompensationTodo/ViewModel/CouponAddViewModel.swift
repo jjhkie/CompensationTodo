@@ -30,8 +30,9 @@ class CouponAddViewModel:MyCellOutput{
         CouponAddModel(header: "Discount", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
         CouponAddModel(header: "Line Color", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)]),
         CouponAddModel(header: "Condition", items: [AddItemInfo(couponImage: UIImage(systemName: "pill")!, couponName: "예시로 작성한 이름", couponDicount: 70.0, couponTerms: nil)])
-    
     ]
+    
+    
     
     struct Input{
         let addButtonTapped : Observable<Void>

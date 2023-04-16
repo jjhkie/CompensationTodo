@@ -32,9 +32,7 @@ class AddCouponLineColorCell: UITableViewCell{
 }
 
 extension AddCouponLineColorCell{
-    
-    
-    
+
     private func layout(){
         var config = UIButton.Configuration.filled()
         
@@ -50,7 +48,5 @@ extension AddCouponLineColorCell{
         containerStackView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
-        
-        
     }
 }

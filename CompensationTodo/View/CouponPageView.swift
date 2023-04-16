@@ -21,8 +21,8 @@ class CouponPageView: UIViewController{
     let tableView = UITableView().then{
         $0.backgroundColor = UIColor(hex: Common.backgroundColor)
         $0.register(CouponCell.self, forCellReuseIdentifier: "Cell")
-
-        $0.estimatedRowHeight = 150
+        
+        $0.estimatedRowHeight = 250
         $0.rowHeight = UITableView.automaticDimension
         
         $0.separatorStyle = .none
@@ -35,8 +35,8 @@ class CouponPageView: UIViewController{
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CouponCell else {return UITableViewCell()}
                 //cell.bottomDescriptionLabel.text = item.title
                 
-                //cell.bottomDescriptionLabel.isHidden = !item.expanded
-                //cell.textLabel?.text = item
+                cell.bottomDescriptionLabel.isHidden = !item.expanded
+                ///cell.textLabel?.text = item
                 return cell
             },
             titleForHeaderInSection: { dataSource, index in

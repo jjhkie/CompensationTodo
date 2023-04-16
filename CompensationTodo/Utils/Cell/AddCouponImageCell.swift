@@ -7,20 +7,30 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class AddCouponImageCell: UITableViewCell{
     
     private let scrollView = UIScrollView()
-    private let containerStackView = UIStackView()
-    private let imageName = ["pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill","pill"]
-    private var image : [UIImageView]?
+    private let containerStackView = UIStackView().then{
+        $0.axis = .horizontal
+        
+    }
+    private let imageName = ["pill","pill","pill","pill"]
+    
+    private var image : [UIImageView]?{
+        get{
+            return imageName.map{
+                UIImageView(image: UIImage(systemName: $0))
+            }
+        }
+    }
+       
+
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        containerStackView.axis = .horizontal
-        image = imageName.map{
-            UIImageView(image: UIImage(systemName: $0))
-        }
+        
         layout()
     }
     
@@ -38,10 +48,15 @@ extension AddCouponImageCell{
         }
         image?.forEach{
             containerStackView.addArrangedSubview($0)
+            $0.snp.makeConstraints{value in
+                value.height.width.equalTo(20)
+                
+            }
         }
+        
 
         containerStackView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+            $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         }
     }
 }

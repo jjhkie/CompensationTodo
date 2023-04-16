@@ -38,15 +38,12 @@ class CouponAddView: UIViewController{
         return RxTableViewSectionedReloadDataSource<CouponAddModel>(
             configureCell: { dataSource, tableView, indexPath, item in
                 print(indexPath.section)
-          
                 switch indexPath.section{
                 case 0:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath) as? AddCouponNameCell else {return UITableViewCell()}
                     cell.textDidChange = { text in
                         self.couponAddVM.updateText(text)
                     }
-                    
-                    
                     return cell
                 case 1:
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as? AddCouponImageCell else {return UITableViewCell()}
